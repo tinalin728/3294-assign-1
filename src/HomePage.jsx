@@ -15,6 +15,10 @@ function HomePage() {
                 </div>
             </section>
 
+            <section>
+                <h1>hi</h1>
+            </section>
+
         </>
     )
 }
