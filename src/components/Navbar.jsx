@@ -1,7 +1,6 @@
-import logo from "../assets/logo.svg"
+import logo from "../../public/assets/logo.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faHeart, faCartShopping, faUser, faBurger } from '@fortawesome/free-solid-svg-icons'
-
 
 function Navbar() {
     return (

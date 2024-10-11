@@ -1,41 +1,13 @@
 import React, { useState } from "react";
 import Navbar from './components/Navbar'
-import { images } from "./assets/assets";
 import ProductSlider from './components/ProductSlider'
+import bestSellersData from '../src/data/products.json'
+
 
 function HomePage() {
-    const productList = [
-        {
-            name: "Larry Lightkeeper Lamp",
-            power: "Illuminates the truth",
-            price: "$40",
-            src: images.product1,
-            id: 1,
-        },
-        {
-            name: "Olly the Optimist",
-            power: "Mood Booster",
-            price: "$40",
-            src: images.product2,
-            id: 2,
-        },
-        {
-            name: "Gizmo the Green Guardian",
-            power: "Nature’s Protector",
-            price: "$40",
-            src: images.product3,
-            id: 3,
-        },
-        {
-            name: "Milo the Mischief",
-            power: "Radiant Energy",
-            price: "$40",
-            src: images.product4,
-            id: 4,
-        },
-    ]
+    const { bestSellers } = bestSellersData;
 
-    const [products, setProducts] = useState(productList);
+    const [products, setProducts] = useState(bestSellers);
 
     return (
         <>
