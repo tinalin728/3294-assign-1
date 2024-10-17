@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './slider.css';
 import SliderArrowNext from "./SliderArrowNext";
 import SliderArrowPrev from "./SliderArrowPrev";
-import ProductCard from "./ProductCard";
+import SliderCard from "./SliderCard";
 
-function ProductSlider(props) {
-
-    const products = props.products;
-    console.log(props, products)
-
+function ProductSlider({ products, updateWishlist }) {
     var settings = {
         infinite: true,
         speed: 500,
@@ -41,32 +37,50 @@ function ProductSlider(props) {
         ]
     };
 
-
     const [favorite, setFavorite] = useState([]);
-    const favBtn = (productId) => {
+
+
+
+    const toggleFav = (productId) => {
         if (favorite.includes(productId)) {
-
-            console.log(productId);
-
-            const newFavs = favorite.filter((singleFav) => {
-                return productId !== singleFav;
-            });
+            // Remove from favorites
+            const newFavs = favorite.filter((singleFav) => productId !== singleFav);
             setFavorite(newFavs);
 
+            updateWishlist(false);
         } else {
-            setFavorite([...favorite, productId],);
+            // Add to favorites
+            setFavorite([...favorite, productId]);
+            updateWishlist(true);
         }
-    }
+
+    };
+
+    // load favs from local storage
+    useEffect(() => {
+        const storedFavs = JSON.parse(localStorage.getItem('favorites'));
+        if (storedFavs) { setFavorite(storedFavs) }
+    }, []);
+
+    // store favs at local storage
+    useEffect(() => {
+        if (favorite.length > 0) {
+
+            localStorage.setItem('favorites', JSON.stringify(favorite));
+        }
+    }, [favorite]);
+
+
 
     return (
         <Slider {...settings}>
 
             {products.map((singleProduct) => {
                 return (
-                    <ProductCard key={singleProduct.id}
+                    <SliderCard key={singleProduct.id}
                         product={singleProduct}
                         isFav={favorite}
-                        toggleFavorite={favBtn}
+                        handleFavClick={toggleFav}
                     />
                 );
             })}

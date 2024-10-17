@@ -32,25 +32,25 @@
     "newArrivals": [
         {
             "id": 1,
-            "name": "Larry Lightkeeper Lamp",
+            "name": "Camo Lightkeeper Lamp",
             "power": "Illuminates the truth",
             "price": "$40"
         },
         {
             "id": 2,
-            "name": "Olly the Optimist",
+            "name": "Kitty the Optimist",
             "power": "Mood Booster",
             "price": "$40"
         },
         {
             "id": 3,
-            "name": "Gizmo the Green Guardian",
+            "name": "Harry the Green Guardian",
             "power": "Nature’s Protector",
             "price": "$40"
         },
         {
             "id": 4,
-            "name": "Milo the Mischief",
+            "name": "Milly the Mischief",
             "power": "Radiant Energy",
             "price": "$40"
         }

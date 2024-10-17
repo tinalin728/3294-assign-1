@@ -1,13 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faPlus, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faPlus } from '@fortawesome/free-solid-svg-icons'
 
-function ProductCard({ product, isFav, toggleFavorite }) {
+function SliderCard({ product, isFav, handleFavClick }) {
+
     return (
         <div className='shadow-md rounded-xl bg-[#fafafa]'>
             <div className='p-4'>
                 <div className='relative mb-2'>
                     <button className="text-2xl absolute top-2 text-gray-400" onClick={() => {
-                        toggleFavorite(product.id);
+                        handleFavClick(product.id);
                     }}>
                         {isFav.includes(product.id) ? <FontAwesomeIcon icon={faHeart} className="text-red-600" /> : <FontAwesomeIcon icon={faHeart} />}
 
@@ -27,4 +28,4 @@ function ProductCard({ product, isFav, toggleFavorite }) {
     )
 }
 
-export default ProductCard
+export default SliderCard

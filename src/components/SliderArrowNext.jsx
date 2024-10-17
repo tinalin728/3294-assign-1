@@ -6,7 +6,7 @@ function SliderArrowNext(props) {
     const { className, onClick } = props;
     return (
         <div className={className} onClick={onClick}>
-            <FontAwesomeIcon icon={faChevronRight} style={{ color: "white", fontSize: '30px' }} />
+            <FontAwesomeIcon icon={faChevronRight} style={{ color: "grey", fontSize: '30px' }} />
         </div>
     );
 }

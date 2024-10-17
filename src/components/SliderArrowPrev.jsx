@@ -7,7 +7,7 @@ function SliderArrowPrev(props) {
     const { className, onClick } = props;
     return (
         <div className={className} onClick={onClick}>
-            <FontAwesomeIcon icon={faChevronLeft} style={{ color: "white", fontSize: '30px' }} />
+            <FontAwesomeIcon icon={faChevronLeft} style={{ color: "grey", fontSize: '30px' }} />
         </div>
     );
 }
