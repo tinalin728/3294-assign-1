@@ -17,23 +17,29 @@ export default {
 
       colors: {
         'soft-blue': '#748DF3',
-        'soft-purple': '#a0a3e5',
+        'soft-purple': '#dcb6e8',
       },
 
       fontSize: {
 
-        'lg': ['1.3rem',
+        'base': ['1rem',
           {
-            lineHeight: '1.5rem',
+            lineHeight: '1.7rem',
+          }
+        ],
+
+        'lg': ['1.2rem',
+          {
+            lineHeight: '2rem',
           }],
 
         'xl': ['1.5rem', {
-          lineHeight: '1.3rem',
+          lineHeight: '2.2rem',
           fontWeight: '400',
         }],
 
         '2xl': ['1.8rem', {
-          lineHeight: '2rem',
+          lineHeight: '2.5rem',
           fontWeight: '700',
         }],
       },

@@ -29,30 +29,13 @@
             "src": "./public/assets/product4.png"
         }
     ],
-    "newArrivals": [
+    "hero": [
         {
-            "id": 1,
-            "name": "Camo Lightkeeper Lamp",
-            "power": "Illuminates the truth",
-            "price": "$40"
-        },
-        {
-            "id": 2,
-            "name": "Kitty the Optimist",
-            "power": "Mood Booster",
-            "price": "$40"
-        },
-        {
-            "id": 3,
-            "name": "Harry the Green Guardian",
-            "power": "Nature’s Protector",
-            "price": "$40"
-        },
-        {
-            "id": 4,
-            "name": "Milly the Mischief",
-            "power": "Radiant Energy",
-            "price": "$40"
+            "id": 5,
+            "name": "Smiley Bob",
+            "power": "Smile Energy",
+            "price": "$40",
+            "src": "./public/assets/product5.png"
         }
     ]
 }

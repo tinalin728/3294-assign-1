@@ -58,19 +58,19 @@ function ProductSlider({ products, updateWishlist }) {
 
     // load favs from local storage
     useEffect(() => {
-        const storedFavs = JSON.parse(localStorage.getItem('favorites'));
+        const storedFavs = JSON.parse(localStorage.getItem('favorites')) || [];
         if (storedFavs) { setFavorite(storedFavs) }
+        else {
+            setFavorite([]);
+        }
     }, []);
 
     // store favs at local storage
     useEffect(() => {
         if (favorite.length > 0) {
-
             localStorage.setItem('favorites', JSON.stringify(favorite));
         }
     }, [favorite]);
-
-
 
     return (
         <Slider {...settings}>
