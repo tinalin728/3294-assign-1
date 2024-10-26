@@ -7,7 +7,7 @@ import { faMagnifyingGlass, faHeart, faCartShopping, faUser, faBurger } from '@f
 function Navbar({ wishlistCount }) {
 
     return (
-        <header className="">
+        <header className="fixed top-0 left-0 w-full bg-white z-50">
             <div className="border-b py-4 md:py-6">
                 <div className="container mx-auto">
                     <div className="flex justify-between items-center">

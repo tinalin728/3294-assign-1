@@ -34,6 +34,8 @@ function HomePage() {
         localStorage.setItem("favCounts", JSON.stringify(wishlistCount))
     }, [wishlistCount]);
 
+
+
     return (
         <>
             <Navbar wishlistCount={wishlistCount} />
@@ -42,7 +44,8 @@ function HomePage() {
 
             <section className="overflow-hidden py-6">
                 <div className="container mx-auto">
-                    <h2 className='font-martel mb-6'> Best Seller</h2>
+                    <h2 className='font-martel mb-6'> Monster Squad of the Month </h2>
+
                     <ProductSlider products={bestSellersProducts} updateWishlist={updateWishlist} />
                 </div>
             </section>

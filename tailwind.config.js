@@ -48,6 +48,15 @@ export default {
         'custom-radial': 'radial-gradient(circle at 10% 20%, rgb(163, 175, 243) 0%, rgb(220, 182, 232) 100.2%)',
       },
 
+      keyframes: {
+        upDown: {
+          '0%, 100%': { transform: 'translateX(-5px)' },
+          '50%': { transform: 'translateX(5px)' },
+        },
+      },
+      animation: {
+        upDown: 'upDown 1.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

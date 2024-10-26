@@ -36,6 +36,12 @@
             "power": "Smile Energy",
             "price": "$40",
             "src": "./public/assets/product5.png"
+        },
+        {
+            "id": 6,
+            "type": "banner",
+            "title": "Halloween Special",
+            "src": "./public/assets/halloweenBanner.jpg"
         }
     ]
 }
