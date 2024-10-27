@@ -27,18 +27,24 @@
             "power": "Radiant Energy",
             "price": "$40",
             "src": "./public/assets/product4.png"
-        }
-    ],
-    "hero": [
+        },
         {
             "id": 5,
             "name": "Smiley Bob",
             "power": "Smile Energy",
             "price": "$40",
             "src": "./public/assets/product5.png"
+        }
+    ],
+    "hero": [
+        {
+            "id": 1,
+            "type": "banner",
+            "title": "Discover",
+            "src": "./public/assets/banner.jpg"
         },
         {
-            "id": 6,
+            "id": 2,
             "type": "banner",
             "title": "Halloween Special",
             "src": "./public/assets/halloweenBanner.jpg"
