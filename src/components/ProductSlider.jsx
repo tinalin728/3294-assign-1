@@ -40,37 +40,35 @@ function ProductSlider({ products, updateWishlist }) {
     const [favorite, setFavorite] = useState([]);
 
 
-
     const toggleFav = (productId) => {
+        let newFavs;
+
         if (favorite.includes(productId)) {
             // Remove from favorites
-            const newFavs = favorite.filter((singleFav) => productId !== singleFav);
-            setFavorite(newFavs);
-
+            newFavs = favorite.filter((singleFav) => productId !== singleFav);
+            //setFavorite(newFavs);
             updateWishlist(false);
         } else {
             // Add to favorites
-            setFavorite([...favorite, productId]);
+            newFavs = ([...favorite, productId]);
             updateWishlist(true);
         }
 
+        setFavorite(newFavs);
+
+        //update local storage
+        localStorage.setItem("favBtn", JSON.stringify(newFavs));
     };
 
-    // load favs from local storage
+    //fetch from local storage for fav states
     useEffect(() => {
-        const storedFavs = JSON.parse(localStorage.getItem('favorites')) || [];
-        if (storedFavs) { setFavorite(storedFavs) }
-        else {
-            setFavorite([]);
+        const storedFavs = localStorage.getItem('favBtn');
+        if (storedFavs) {
+            const favorites = JSON.parse(storedFavs);
+            setFavorite(favorites);
         }
     }, []);
 
-    // store favs at local storage
-    useEffect(() => {
-        if (favorite.length > 0) {
-            localStorage.setItem('favorites', JSON.stringify(favorite));
-        }
-    }, [favorite]);
 
     return (
         <Slider {...settings}>

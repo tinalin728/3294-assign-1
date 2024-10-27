@@ -4,7 +4,7 @@ import { faHeart, faPlus } from '@fortawesome/free-solid-svg-icons'
 function SliderCard({ product, isFav, handleFavClick }) {
 
     return (
-        <div className='shadow-md rounded-xl bg-[#fafafa]'>
+        <div className='shadow-md rounded-xl bg-[#fafafa] overflow-hidden'>
             <div className='p-4'>
                 <div className='relative mb-2'>
                     <button className="text-2xl absolute top-2 text-gray-400" onClick={() => {
