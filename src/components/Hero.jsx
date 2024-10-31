@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { gsap } from 'gsap';
 
+import NavBtn from './NavBtn';
+
 function Hero() {
     //fetching product with index for hero banners
     const [heroBanner1, setHeroBanner1] = useState([])
@@ -64,7 +66,7 @@ function Hero() {
 
     return (
         <>
-            <section className='pt-[80px] md:pt-[200px] h-full relative'>
+            <section className='pt-[80px] md:pt-[172px] h-full relative'>
                 <div ref={firstHeroRef} className="wrapper first-hero sticky top-0 bottom-0" style={{
                     backgroundImage: isMobile
                         ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroBanner1.src})`
@@ -82,12 +84,11 @@ function Hero() {
                                 <p className='mb-8 text-gray-200'>
                                     Unleash your imagination with our unique collection of soft, lovable monsters designed to bring joy and creativity to your life. Each monster is crafted with care and is ready to become your next cuddly companion!
                                 </p>
-                                <div className='inline-flex items-center group'>
-                                    <div className="relative">
-                                        <a href="/" className='relative bg-white border-black border-2 px-6 py-2 inline-flex z-10 cursor-pointer group'> Discover Now</a>
-                                        <div className='absolute w-full h-full border-2 border-black top-2 left-2 z-0 transition-all duration-500 ease-in-out group-hover:top-0 group-hover:left-0'></div>
-                                    </div>
-                                </div>
+                                <NavBtn
+                                    text='Discover Now'
+                                    href='/'
+                                    variant='primary'
+                                />
                             </div>
                         </div>
 
@@ -119,10 +120,11 @@ function Hero() {
                                     Packed with potions, pumpkins, and paranormal thrills!
                                 </p>
 
-                                <div className='relative inline-flex items-center group'>
-                                    <a href="/" className='bg-black border-white text-white border-2 px-6 py-2 inline-flex z-10 cursor-pointer group'> Shop Now</a>
-                                    <div className='absolute w-full h-full border-2 border-white top-2 left-2 z-0 transition-all duration-500 ease-in-out group-hover:top-0 group-hover:left-0'></div>
-                                </div>
+                                <NavBtn
+                                    text='Discover Now'
+                                    href='/'
+                                    variant='secondary'
+                                />
                             </div>
                         </div>
                     </div>

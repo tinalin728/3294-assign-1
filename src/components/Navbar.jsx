@@ -8,7 +8,7 @@ function Navbar({ wishlistCount }) {
 
     return (
         <header className="fixed top-0 left-0 w-full bg-white z-50">
-            <div className="border-b py-4 md:py-6">
+            <div className="border-b py-4">
                 <div className="container mx-auto">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-6">
@@ -47,7 +47,7 @@ function Navbar({ wishlistCount }) {
                 </div>
             </div>
 
-            <div className="hidden md:block md:border-b md:py-6">
+            <div className="hidden md:block md:border-b md:py-4">
                 <nav className="container mx-auto flex justify-center items-center gap-8">
                     <a href="#">Shop</a>
                     <a href="#">Monsters by Age</a>
