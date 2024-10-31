@@ -2,38 +2,38 @@
     "bestSellers": [
         {
             "id": 1,
-            "name": "Larry Lightkeeper Lamp",
+            "name": "Larry Lightkeeper",
             "power": "Illuminates the truth",
             "price": "$40",
-            "src": "./public/assets/product1.png"
+            "src": "/assets/product1.png"
         },
         {
             "id": 2,
-            "name": "Olly the Optimist",
+            "name": "Olly Jollie",
             "power": "Mood Booster",
             "price": "$40",
-            "src": "./public/assets/product2.png"
+            "src": "/assets/product2.png"
         },
         {
             "id": 3,
-            "name": "Gizmo the Green Guardian",
+            "name": "Gizmo Green",
             "power": "Nature’s Protector",
             "price": "$40",
-            "src": "./public/assets/product3.png"
+            "src": "/assets/product3.png"
         },
         {
             "id": 4,
-            "name": "Milo the Mischief",
+            "name": "Milo Mischief",
             "power": "Radiant Energy",
             "price": "$40",
-            "src": "./public/assets/product4.png"
+            "src": "/assets/product4.png"
         },
         {
             "id": 5,
             "name": "Smiley Bob",
             "power": "Smile Energy",
             "price": "$40",
-            "src": "./public/assets/product5.png"
+            "src": "/assets/product5.png"
         }
     ],
     "hero": [
@@ -41,13 +41,21 @@
             "id": 1,
             "type": "banner",
             "title": "Discover",
-            "src": "./public/assets/banner.jpg"
+            "src": "/assets/banner.jpg"
         },
         {
             "id": 2,
             "type": "banner",
             "title": "Halloween Special",
-            "src": "./public/assets/halloweenBanner.jpg"
+            "src": "/assets/halloweenBanner.jpg"
+        }
+    ],
+    "icons": [
+        {
+            "id": 1,
+            "type": "header icons",
+            "title": "monster",
+            "src": "/assets/icon-monster.png"
         }
     ]
 }

@@ -1,24 +1,11 @@
 .slick-slide>div {
-    margin: 0 5px;
+    margin: 0 20px;
 }
 
 .slick-list {
     margin: 0 -20px;
     height: auto;
     z-index: 1;
-}
-
-.slick-slide {
-    padding: .5rem;
-}
-
-.slick-track {
-    display: flex !important;
-}
-
-.slick-slide {
-    height: 500px !important;
-    width: 300px;
 }
 
 /* arrows */

@@ -11,7 +11,7 @@ function Navbar({ wishlistCount }) {
             <div className="border-b py-4 md:py-6">
                 <div className="container mx-auto">
                     <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-6">
                             <button className="text-xl md:hidden" >
                                 <FontAwesomeIcon icon={faBurger} />
                             </button>
@@ -26,15 +26,14 @@ function Navbar({ wishlistCount }) {
 
                         <a><img src={logo} alt="logo" className="w-20 md:w-28" /></a>
 
-                        <div className="flex items-center gap-4 lg:gap-6">
-                            <a className="hidden md:flex md:justify-between md:items-center md:gap-2">
-                                <span> {wishlistCount} </span>
+                        <div className="flex items-center gap-6">
+                            <a className="hidden md:flex md:justify-between md:items-center">
+                                <span className="md:w-[20px]"> {wishlistCount} </span>
                                 <FontAwesomeIcon icon={faHeart} className="text-xl" />
                             </a>
 
                             <a href="#" >
                                 <p className="hidden md:inline-block"> Account</p>
-
                                 <FontAwesomeIcon icon={faUser} className="text-xl inline-block md:hidden" />
                             </a>
 
@@ -49,12 +48,12 @@ function Navbar({ wishlistCount }) {
             </div>
 
             <div className="hidden md:block md:border-b md:py-6">
-                <div className="container mx-auto flex justify-center items-center gap-8">
+                <nav className="container mx-auto flex justify-center items-center gap-8">
                     <a href="#">Shop</a>
                     <a href="#">Monsters by Age</a>
                     <a href="#">Build Your Monster</a>
                     <a href="#" className="text-soft-blue">Sale</a>
-                </div>
+                </nav>
             </div>
         </header >
     )
