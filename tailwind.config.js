@@ -18,6 +18,7 @@ export default {
       colors: {
         'soft-blue': '#748DF3',
         'soft-purple': '#dcb6e8',
+        'soft-grey': '#fafafa',
       },
 
       fontSize: {
@@ -44,21 +45,28 @@ export default {
         }],
       },
 
-      backgroundImage: {
-        'custom-radial': 'radial-gradient(circle at 10% 20%, rgb(163, 175, 243) 0%, rgb(220, 182, 232) 100.2%)',
-      },
+      // borderColor: {
+      //   'custom-radial': 'linear-gradient(circle at 10% 20%, rgb(163, 175, 243) 0%, rgb(220, 182, 232) 100.2%)',
+      // },
 
       keyframes: {
         upDown: {
           '0%, 100%': { transform: 'translateX(-5px)' },
           '50%': { transform: 'translateX(5px)' },
         },
+
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
+
       animation: {
         upDown: 'upDown 1.5s ease-in-out infinite',
+        rotate: 'rotate 5s linear infinite',
       },
-    },
-  },
-  plugins: [],
-}
 
+    },
+    plugins: [],
+  }
+};

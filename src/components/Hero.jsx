@@ -25,7 +25,7 @@ function Hero() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
     //creates a ref to directly access the DOM element of the first banner (to animate)
-    const firstHeroRef = useRef();
+    const firstHeroRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {

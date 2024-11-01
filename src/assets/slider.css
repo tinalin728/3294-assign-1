@@ -4,8 +4,10 @@
 
 .slick-list {
     margin: 0 -20px;
+    padding: 5px 0;
     height: auto;
     z-index: 1;
+    box-sizing: initial;
 }
 
 /* arrows */
