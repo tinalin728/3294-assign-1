@@ -1,7 +1,6 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import AddToCartBtn from '../AddToCartBtn';
+import AddToCartBtn from '../buttons/AddToCartBtn';
 
 
 function SliderCard({ product, isFav, handleFavClick }) {

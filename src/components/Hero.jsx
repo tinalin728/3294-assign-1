@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { gsap } from 'gsap';
 
-import NavBtn from './NavBtn';
+import NavBtn from './buttons/NavBtn';
 
 function Hero() {
     //fetching product with index for hero banners
@@ -93,7 +93,7 @@ function Hero() {
                         </div>
 
 
-                        <div className='hidden md:flex-1 md:block'>
+                        <div className='hidden lg:flex-1 lg:block'>
                             <div className='flex items-center gap-4 -rotate-90 absolute bottom-1/2 right-0'>
                                 <FontAwesomeIcon icon={faAngleLeft} className='text-xl text-gray-600 animate-upDown' />
                                 <span className='uppercase tracking-wide text-lg text-gray-600'>Scroll</span>
@@ -106,13 +106,15 @@ function Hero() {
                 <div className='wrapper second-hero relative'>
                     <div className='z-10 relative'
                         style={{
-                            backgroundImage: `url(${heroBanner2.src})`,
+                            backgroundImage: isMobile
+                                ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(${heroBanner2.src})`
+                                : `url(${heroBanner2.src})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
                         }} >
                         <div className='container mx-auto w-full min-h-[75vh] flex items-center'>
-                            <div className='text-center mt-10 lg:text-left'>
+                            <div className='w-full text-center mt-10 lg:text-left'>
                                 <h1 className='mb-4 text-white'>Enter the Haunted Hideaway!
                                 </h1>
 
